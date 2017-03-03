@@ -1,0 +1,11 @@
+﻿<div ng-controller="QuestionsConfigCtrl">
+    <form ng-submit="addQuestion()">
+        <label for="newQuestion">Enter a question:</label>
+        <br /><br /><input id="newQuestion" type="text" required ng-model="newQuestion" />
+        <br /><br /><input type="submit" value="Save">
+    </form>
+
+    <ul ng-repeat="question in questions">
+        <li>{{question}}</li>
+    </ul>
+</div>
