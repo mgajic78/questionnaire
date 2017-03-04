@@ -14,6 +14,9 @@ app.controller('QuestionsConfigCtrl', ['$scope', function ($scope) {
 
     $scope.addQuestion = function () {
 
-        $scope.questions.push($scope.newQuestion);
+        if ($scope.questions.indexOf($scope.newQuestion) === -1) {
+
+            $scope.questions.push($scope.newQuestion);
+        }
     };
 }]);
